@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "antd/dist/reset.css";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Layout, Button } from "antd";
+import { Layout } from "./components/Layout.jsx";
+import { HomePage } from "./pages/HomePage.jsx";
+import { LoginPage } from "./pages/LoginPage.jsx";
+import { RegistrationPage } from "./pages/RegistrationPage.jsx";
 
 function App() {
   const [data, setData] = useState(null);
@@ -15,7 +18,11 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <Button type="primary">Test</Button>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="register" element={<RegistrationPage />}></Route>
+          <Route path="login" element={<LoginPage />}></Route>
+        </Routes>
       </Layout>
       {!data ? "Loading..." : data}
     </div>

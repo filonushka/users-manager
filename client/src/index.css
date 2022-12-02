@@ -4,3 +4,10 @@
   box-sizing: border-box;
   font-family: "Lexend Exa", sans-serif;
 }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #212120;
+  color: #ffffff;
+  min-height: 100vh;
+}
